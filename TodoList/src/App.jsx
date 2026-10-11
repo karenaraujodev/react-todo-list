@@ -1,17 +1,18 @@
 import './App.css'
+import Header from './header'
+import TaskForm from './TaskForm'
+import TaskList from './TaskList'
+import Footer from './Footer'
 
 function App() {
   return (
     <>
-      <header />
+      <Header />
       <main>
-        <input type="text" placeholder="Adicione uma nova tarefa"/>
-        <button id='addItem'>Adicionar</button>
-        <ul id='list'></ul>
+        <TaskForm />
+        <TaskList />
       </main>
-      <footer>
-        <p>Desenvolvido com carinho por Karen Alves </p>
-      </footer>
+      <Footer />
     </>
       
 
