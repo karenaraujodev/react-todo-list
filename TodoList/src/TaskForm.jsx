@@ -1,14 +1,25 @@
 import { useState } from 'react'
 
-function TaskForm() {
+function TaskForm({ adicionarTarefa }) {
   const [texto, setTexto] = useState('')
 
   function handleChange(event) {
     setTexto(event.target.value)
   }
+  function handleSubmit(event) {
+  event.preventDefault()
 
+  if (texto.trim() === '') {
+    return
+  }
+
+  adicionarTarefa(texto)
+
+  setTexto('')
+}
+ 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
