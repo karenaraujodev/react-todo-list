@@ -16,7 +16,7 @@ function App() {
       <Header />
       <main>
         <TaskForm adicionarTarefa={adicionarTarefa} />
-        <TaskList />
+        <TaskList tarefas={tarefas} />
       </main>
       <Footer />
     </>
